@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>操作マニュアル </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="操作マニュアル ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/aigidjp/Earthquake-simulation-tools/blob/feature/gh-pages/markdown/manual/userMan.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="操作マニュアル">操作マニュアル</h1>
+
+<h1 id="1-本書について">1 本書について</h1>
+<p>本書では、建物振動シミュレーションシステム（以下「本システム」という。）の操作手順について記載しています。</p>
+<h1 id="2-使い方">2 使い方</h1>
+<h2 id="2-1-ログイン画面">2-1 ログイン画面</h2>
+<p>本システムにアクセスすると、まずログイン画面が表示されます。</p>
+<p>Emailアドレスとパスワードを入力し、「ログイン」ボタンを押下すると、メニュー画面が表示されます。</p>
+<p><img src="../resources/userMan/manual_001.png" alt=""></p>
+<h2 id="2-2-メニュー画面">2-2 メニュー画面</h2>
+<p>広域のシミュレーションを行うか、個別建物のシミュレーションを行うかを選択します。</p>
+<p><img src="../resources/userMan/manual_002.png" alt=""></p>
+<h2 id="2-2-1-広域のシミュレーションメニュー画面">2-2-1 広域のシミュレーションメニュー画面</h2>
+<ol>
+<li><p>対象地域メッシュプリセット
+シミュレーションの対象地域のプリセットを登録する機能です。</p>
+</li>
+<li><p>地震動データプリセット
+シミュレーションに使用する地震動データのプリセットを登録する機能です。</p>
+</li>
+<li><p>シミュレーション予約登録
+シミュレーションの予約を登録する機能です。</p>
+</li>
+<li><p>シミュレーション管理
+シミュレーションの管理を行う機能です。</p>
+</li>
+<li><p>メニューに戻る
+メニュー画面に戻ります。</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_003.png" alt=""></p>
+<h2 id="2-2-1-1-地域プリセット一覧">2-2-1-1 地域プリセット一覧</h2>
+<p>登録されている地域プリセットの一覧が表示されます。</p>
+<ol>
+<li><p>地域プリセットの新規登録
+地域プリセットの新規登録画面に遷移します。</p>
+</li>
+<li><p>地域プリセットの付帯情報の登録
+既存の地域プリセットに付帯情報を登録します。</p>
+</li>
+<li><p>地域プリセットの削除
+選択した地域プリセットを削除します。</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_004.png" alt=""></p>
+<h2 id="2-2-1-2-地域プリセット新規登録">2-2-1-2 地域プリセット新規登録</h2>
+<ol>
+<li><p>地域名
+地域プリセットの名前を入力します。</p>
+</li>
+<li><p>地域メッシュ
+地域プリセットの対象地域のメッシュを選択します。
+地図画面に遷移し、該当地域を選択します。</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_005.png" alt=""></p>
+<p><img src="../resources/userMan/manual_006.png" alt=""></p>
+<h2 id="2-2-1-3-シミュレーション予約">2-2-1-3 シミュレーション予約</h2>
+<p>地域と地震動データを選択し、シミュレーションの予約を登録します。</p>
+<p><img src="../resources/userMan/manual_007.png" alt=""></p>
+<h2 id="2-2-1-4-シミュレーション管理">2-2-1-4 シミュレーション管理</h2>
+<ol>
+<li><p>登録されているシミュレーションの一覧が表示されます</p>
+</li>
+<li><p>ステータスの欄に、現在の状況が表示されます</p>
+</li>
+<li><p>シミュレーションの詳細を確認するには、詳細ボタンを押下します</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_008.png" alt=""></p>
+<h2 id="2-2-1-5-シミュレーション予約詳細">2-2-1-5 シミュレーション予約詳細</h2>
+<p>シミュレーションの詳細を確認します。</p>
+<p>データのダウンロード、およびデータ可視化の結果に遷移することができます。</p>
+<p><img src="../resources/userMan/manual_009.png" alt=""></p>
+<h2 id="2-2-2-個別建物のシミュレーションメニュー画面">2-2-2 個別建物のシミュレーションメニュー画面</h2>
+<ol>
+<li><p>建物データプリセット
+シミュレーションの対象建物のプリセットを登録する機能です。</p>
+</li>
+<li><p>解析モデルプリセット
+シミュレーションに使用する解析モデルデータのプリセットを登録する機能です。</p>
+</li>
+<li><p>シミュレーション予約登録
+シミュレーションの予約を登録する機能です。</p>
+</li>
+<li><p>シミュレーション管理
+シミュレーションの管理を行う機能です。</p>
+</li>
+<li><p>メニューに戻る
+メニュー画面に戻ります。</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_010.png" alt=""></p>
+<h1 id="2-2-2-1-建物データプリセット一覧">2-2-2-1 建物データプリセット一覧</h1>
+<p>登録されている建物データプリセットの一覧が表示されます。</p>
+<ol>
+<li><p>建物データプリセットの新規登録
+建物データプリセットの新規登録画面に遷移します。</p>
+</li>
+<li><p>建物データプリセットの付帯情報の登録
+既存の建物データプリセットに付帯情報を登録します。</p>
+</li>
+<li><p>建物データプリセットの削除
+選択した建物データプリセットを削除します。</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_011.png" alt=""></p>
+<h2 id="2-2-2-2-建物データプリセット新規登録">2-2-2-2 建物データプリセット新規登録</h2>
+<ol>
+<li><p>建物名
+建物データプリセットの名前を入力します。</p>
+</li>
+<li><p>緯度
+建物の緯度を入力します。</p>
+</li>
+<li><p>経度
+建物の経度を入力します。</p>
+</li>
+</ol>
+<p>緯度と経度は、地図画面に遷移し、該当地域を選択できます。</p>
+<p><img src="../resources/userMan/manual_012.png" alt=""></p>
+<p><img src="../resources/userMan/manual_013.png" alt=""></p>
+<h2 id="2-2-2-3-シミュレーション予約">2-2-2-3 シミュレーション予約</h2>
+<p>建物と解析モデルを選択し、シミュレーションの予約を登録します。</p>
+<p><img src="../resources/userMan/manual_014.png" alt=""></p>
+<h2 id="2-2-2-4-シミュレーション管理">2-2-2-4 シミュレーション管理</h2>
+<ol>
+<li><p>登録されているシミュレーションの一覧が表示されます</p>
+</li>
+<li><p>ステータスの欄に、現在の状況が表示されます</p>
+</li>
+<li><p>シミュレーションの詳細を確認するには、詳細ボタンを押下します</p>
+</li>
+</ol>
+<p><img src="../resources/userMan/manual_015.png" alt=""></p>
+<h2 id="2-2-2-5-シミュレーション予約詳細">2-2-2-5 シミュレーション予約詳細</h2>
+<p>シミュレーションの詳細を確認します。</p>
+<p>データのダウンロード、およびデータ可視化の結果に遷移することができます。</p>
+<p><img src="../resources/userMan/manual_016.png" alt=""></p>
+<h2 id="2-3-シミュレーション結果">2-3 シミュレーション結果</h2>
+<h2 id="2-3-1-広域シミュレーション結果">2-3-1 広域シミュレーション結果</h2>
+<p>地震動における建物の倒壊危険性が色分けされて表示されます。</p>
+<p><img src="../resources/userMan/manual_017.png" alt=""></p>
+<h2 id="2-3-2-時系列データの表示">2-3-2 時系列データの表示</h2>
+<p>地震の際、建物がどれだけ揺れるのかを時系列で表示します。</p>
+<p>再生コントロールが表示されます。</p>
+<p><img src="../resources/userMan/manual_018.png" alt=""></p>
+<h2 id="2-3-3-緊急輸送道路のバッファ表示">2-3-3 緊急輸送道路のバッファ表示</h2>
+<p>緊急輸送道路のバッファが表示されます。</p>
+<p>バッファの大きさは画面から変更可能です。</p>
+<p><img src="../resources/userMan/manual_019.png" alt=""></p>
+<h2 id="2-3-4-シミュレーション結果比較ダッシュボード">2-3-4 シミュレーション結果比較ダッシュボード</h2>
+<p>地図上の任意の範囲を選択し、結果をグラフで表示します。</p>
+<p>最大2箇所の選択が可能です。</p>
+<p>選択する毎に、前のグラフが置き換わって表示されます。</p>
+<p><img src="../resources/userMan/manual_020.png" alt=""></p>
+<h2 id="2-3-5-個別建物シミュレーション結果">2-3-5 個別建物シミュレーション結果</h2>
+<p>戸別建物のシミュレーション結果が表示されます。</p>
+<p><img src="../resources/userMan/manual_021.png" alt=""></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/aigidjp/Earthquake-simulation-tools/blob/feature/gh-pages/markdown/manual/userMan.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
 
@@ -63,7 +63,7 @@
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -80,7 +80,7 @@
 <h1 id="環境構築手順書">環境構築手順書</h1>
 
 <h1 id="1-本書について">1 本書について</h1>
-<p>本書では、カーボンニュートラル施策推進支援システム（以下「本システム」という。）の利用環境構築手順について記載しています。本システムの構成や仕様の詳細については以下も参考にしてください。</p>
+<p>本書では、建物振動シミュレーションシステム（以下「本システム」という。）の利用環境構築手順について記載しています。本システムの構成や仕様の詳細については以下も参考にしてください。</p>
 <p><a href="https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0030_ver01.pdf">技術検証レポート</a></p>
 <h1 id="2-動作環境">2 動作環境</h1>
 <p>本システムの動作環境は以下のとおりです。</p>
@@ -94,9 +94,9 @@
 </thead>
 <tbody>
 <tr>
-<td>OS</td>
-<td>Microsoft Windows 10 または 11</td>
-<td>同左</td>
+<td>WEBブラウザ</td>
+<td>特に縛りは無い</td>
+<td>Google Chrome</td>
 </tr>
 <tr>
 <td>CPU</td>
@@ -115,219 +115,101 @@
 </tr>
 <tr>
 <td>ネットワーク</td>
-<td>【解析・シミュレーション】<br>不要<br><br>【集計・適地判定】<br>範囲選択機能を使用しない場合はネットワーク環境は不要<br>範囲選択機能を使用する場合、以下のURLを閲覧できる環境が必要<br>・地理院地図（国土地理院）　<br>http://cyberjapandata.gsi.go.jp<br>・地図表示のため標準地図<br>https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png</td>
+<td>光回線</td>
 <td>同左</td>
 </tr>
 </tbody>
 </table>
-<h1 id="3-インストール手順">3 インストール手順</h1>
-<p><a href="https://github.com/Project-PLATEAU/UC22-013-SolarPotential/releases/">こちら</a>
-からアプリケーションをダウンロードします。</p>
-<p>ダウンロード後、zipファイルを右クリックし、「すべて展開」を選択することで、zipファイルを展開します。</p>
-<p>展開されたフォルダ内の「SolarPotential.exe」をダブルクリックすることで、アプリケーションが起動します。</p>
-<p><img src="../resources/userMan/tutorial_028.png" alt=""></p>
-<h1 id="4-ビルド手順">4 ビルド手順</h1>
-<p>自身でソースファイルをダウンロードしビルドを行うことで、実行ファイルを生成することができます。<br>
+<h1 id="3-ビルド手順">3 ビルド手順</h1>
+<h3 id="ビルドの準備">ビルドの準備</h3>
+<p>自身でソースファイルをダウンロードしビルドを行うことで、システムを動作させることができます。<br>
 ソースファイルは
-<a href="https://github.com/Project-PLATEAU/UC22-013-SolarPotential/">こちら</a>
+<a href="https://github.com/Project-PLATEAU/Earthquake-simulation-tools/">こちら</a>
 からダウンロード可能です。</p>
-<p>GitHubからダウンロードしたソースファイルの構成は以下のようになっています。</p>
-<p><img src="../resources/devMan/tutorial_028.png" alt=""></p>
-<p>（1）本システムのソリューションファイル（SolarPotential.sln）をVisualStudio2019で開きます。</p>
-<p>ソリューションファイルはSRC\EXE\SolarPotential-CS\SolarPotentialに格納されています。</p>
-<p>（2）SolarPotential.slnをVisualStudio2019で開くと、ソリューション'SolarPotential'に6つのプロジェクトが表示されます。</p>
-<p>以下の赤枠部分のように、ソリューション構成を【Release】に、ソリューションプラットフォームを【x64】に設定します。</p>
-<p><img src="../resources/devMan/tutorial_029.png" alt=""></p>
-<p>（3）以下の赤枠部分のように、[ソリューションのビルド]を選択し、ソリューション全体をビルドします。</p>
-<p><img src="../resources/devMan/tutorial_030.png" alt=""></p>
-<p>（4）ビルドが正常に終了すると、ソリューションファイルと同じフォルダにあるbin\Releaseフォルダに実行ファイルが生成されます。</p>
-<p><img src="../resources/devMan/tutorial_031.png" alt=""></p>
-<p>※ダウンロードしたソリューションをビルドする際に、ビルドエラーとなり、次のメッセージが出力されるケースがあります。</p>
-<p>「（ファイル名）を処理できませんでした。インターネットまたは制限付きゾーン内にあるか、ファイルに
-Web のマークがあるためです。これらのファイルを処理するには、Web
-のマークを削除してください。」</p>
-<p>この場合は該当するファイルのプロパティを開き、全般タブ内の「セキュリティ」の項目について[許可する]にチェックを入れてください。</p>
-<p><img src="../resources/devMan/tutorial_032.png" alt=""></p>
-<p>【参考】</p>
-<p>ソースファイルの構成と機能は以下のようになっています。コードを修正する際の参考としてください。</p>
-<p><img src="../resources/devMan/tutorial_033.png" alt=""></p>
-<h1 id="5-準備物一覧">5 準備物一覧</h1>
-<p>アプリケーションを利用するために以下のデータを入手します。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>データ種別</th>
-<th>機能</th>
-<th>用途</th>
-<th>入力方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>①</td>
-<td>3D都市モデル(CityGML)G空間情報センターから取得します。<br> <a href="https://front.geospatial.jp/">https://front.geospatial.jp/</a></td>
-<td>全般</td>
-<td>全般</td>
-<td>格納フォルダパス指定</td>
-</tr>
-<tr>
-<td>②</td>
-<td>月毎の可照時間国立天文台 こよみの計算Webページから取得します。<br> <a href="https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/koyomix.cgi">https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/koyomix.cgi</a></td>
-<td>発電ポテンシャル推計</td>
-<td>日射量の推計</td>
-<td>CSVファイルを手動作成しファイルパス指定</td>
-</tr>
-<tr>
-<td>③</td>
-<td>毎月の平均日照時間気象庁 過去の気象データ・ダウンロードから取得します。<br> <a href="https://www.data.jma.go.jp/gmd/risk/obsdl/index.php">https://www.data.jma.go.jp/gmd/risk/obsdl/index.php</a></td>
-<td>発電ポテンシャル推計</td>
-<td>日射量の推計</td>
-<td>CSVファイルをダウンロードしファイルパス指定</td>
-</tr>
-<tr>
-<td>④</td>
-<td>月毎の積雪深NEDO 日射量データベース閲覧システム METPV-20から取得します。<br> <a href="https://appww2.infoc.nedo.go.jp/appww/index.html">https://appww2.infoc.nedo.go.jp/appww/index.html</a></td>
-<td>発電ポテンシャル推計</td>
-<td>日射量の推計</td>
-<td>CSVファイルを手動作成しファイルパス指定</td>
-</tr>
-<tr>
-<td>⑤</td>
-<td>3D都市モデル(DEMデータ)G空間情報センターから取得します。<br> <a href="https://front.geospatial.jp/">https://front.geospatial.jp/</a></td>
-<td>発電ポテンシャル推計</td>
-<td>日射量の推計</td>
-<td>格納フォルダパス指定</td>
-</tr>
-<tr>
-<td>⑥</td>
-<td>制限区域データ（シェープファイル）<br>（加賀市　景観整備区域・石川県　石川県眺望計画）</td>
-<td>パネル設置適地判定</td>
-<td>パネル設置適地判定</td>
-<td>シェープファイルパス指定</td>
-</tr>
-<tr>
-<td>⑦</td>
-<td>気象関連データ（積雪）(国土数値情報の平年値（気候）メッシュ)</td>
-<td>パネル設置適地判定</td>
-<td>パネル設置適地判定</td>
-<td>シェープファイルをダウンロードしファイルパス指定</td>
-</tr>
-</tbody>
-</table>
-<p>本システムでは、3D都市モデルの建築物モデルの形状（LOD1、LOD2）と属性を活用します。</p>
-<p>地形を考慮した解析を行う場合は、地形（LOD1）も活用してください。</p>
-<table>
-<thead>
-<tr>
-<th>地物</th>
-<th>地物型</th>
-<th>属性区分</th>
-<th>属性名</th>
-<th>内容</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>建築物LOD2</td>
-<td>bldg:Building</td>
-<td>空間属性</td>
-<td>bldg:RoofSurface</td>
-<td>建築物のLOD2の屋根面</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>bldg:WallSurface</td>
-<td>建築物のLOD2の壁面</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>主題属性</td>
-<td>bldg:measuredHeight</td>
-<td>計測高さ</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:buildingDisasterRiskAttribute</td>
-<td>災害リスク</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:buildingID</td>
-<td>建物ID</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:buildingStructureType</td>
-<td>構造種別</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:buildingStructureOrgType</td>
-<td>構造種別（独自）</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:BuildingRiverFloodingRiskAttribute</td>
-<td>洪水浸水リスク</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:depth</td>
-<td>浸水深</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:BuildingTsunamiRiskAttribute</td>
-<td>津波浸水リスク</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:depth</td>
-<td>浸水深</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td>uro:BuildingLandSlideRiskAttribute</td>
-<td>土砂災害リスク</td>
-</tr>
-<tr>
-<td>建築物LOD1</td>
-<td>bldg:Building</td>
-<td>空間属性</td>
-<td>bldg:lod1Solid</td>
-<td>建築物のLOD1の立体</td>
-</tr>
-<tr>
-<td>地形LOD1</td>
-<td>dem:ReliefFeature</td>
-<td>空間属性</td>
-<td>dem:tin</td>
-<td>地形LOD1の面</td>
-</tr>
-</tbody>
-</table>
+<ol>
+<li><p><strong>環境の確認</strong></p>
+<ul>
+<li>Node.js v16.x以上がインストールされていることを確認</li>
+<li>pnpmがインストールされていることを確認（なければ<code>npm install -g pnpm</code>でインストール）</li>
+</ul>
+</li>
+<li><p><strong>依存関係のインストール</strong></p>
+<pre><code class="lang-bash">pnpm install
+</code></pre>
+</li>
+<li><p><strong>環境変数の設定</strong></p>
+<ul>
+<li>本番環境用の環境変数が<code>.env</code>または<code>.env.production</code>ファイルに設定されていることを確認</li>
+<li>AWS認証情報やAPIエンドポイントなど、必要な設定が完了していることを確認</li>
+</ul>
+</li>
+<li><p><strong>アダプターのインストール</strong></p>
+<ul>
+<li>デプロイ先の環境に応じて適切なアダプターをインストール</li>
+</ul>
+<pre><code class="lang-bash"># AWS Lambda + API Gateway用
+pnpm add -D @sveltejs/adapter-node
+
+# 静的サイトホスティング用
+pnpm add -D @sveltejs/adapter-static
+
+# Vercel用
+pnpm add -D @sveltejs/adapter-vercel
+</code></pre>
+</li>
+<li><p><strong>svelte.config.js の確認</strong></p>
+<ul>
+<li>使用するアダプターが正しく設定されていることを確認</li>
+</ul>
+</li>
+</ol>
+<h3 id="ビルド実行">ビルド実行</h3>
+<p>本番用ビルドを実行します：</p>
+<pre><code class="lang-bash">pnpm run build
+</code></pre>
+<p>このコマンドは以下の処理を行います：</p>
+<ul>
+<li>TypeScriptのコンパイル</li>
+<li>SvelteコンポーネントのSSRおよびクライアントコードのビルド</li>
+<li>CSSの最適化</li>
+<li>アセットの最適化と圧縮</li>
+<li>選択したアダプターによる出力ディレクトリの構成</li>
+</ul>
+<h3 id="ビルド後の確認">ビルド後の確認</h3>
+<p>ビルドされたアプリケーションをローカルでプレビューするには：</p>
+<pre><code class="lang-bash">pnpm run preview
+</code></pre>
+<h3 id="デプロイ">デプロイ</h3>
+<p>デプロイ先環境に応じた手順：</p>
+<ol>
+<li><p><strong>AWS Lambda + API Gateway</strong></p>
+<ul>
+<li><code>build</code>ディレクトリを Lambda 関数としてデプロイ</li>
+<li>API Gateway との連携設定</li>
+</ul>
+</li>
+<li><p><strong>静的ホスティング (S3, Netlify, GitHub Pages など)</strong></p>
+<ul>
+<li><code>build/client</code>ディレクトリの内容をホスティングサービスにアップロード</li>
+</ul>
+</li>
+<li><p><strong>Dockerコンテナ</strong></p>
+<pre><code class="lang-bash"># Dockerfileがプロジェクトルートにあることを確認
+docker build -t mosiri-app .
+docker run -p 3000:3000 mosiri-app
+</code></pre>
+</li>
+</ol>
+<h3 id="よくある問題と解決策">よくある問題と解決策</h3>
+<ul>
+<li><strong>ビルドエラー</strong>: 依存関係のバージョン不一致の場合は <code>pnpm install</code> を再実行</li>
+<li><strong>環境変数エラー</strong>: <code>.env.production</code> ファイルを確認</li>
+<li><strong>アダプタエラー</strong>: 正しいアダプタがインストールされ、設定されていることを確認</li>
+<li><strong>APIアクセスエラー</strong>: CORS設定とAPIエンドポイントの構成を確認</li>
+</ul>
+<blockquote>
+<p>注意: デプロイ先の環境に合わせて適切な<a href="https://kit.svelte.dev/docs/adapters">adapter</a>を必ずインストールしてください。デフォルトでは開発環境向けのアダプタのみが設定されています。</p>
+</blockquote>
 
 </article>
           </div>
